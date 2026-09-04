@@ -1,0 +1,56 @@
+export const PILOTS = [
+  {
+    id: 'PLT-501',
+    challengeId: 'CH-2026-081',
+    challengeTitle: 'AI-Powered Crop Disease Diagnostics',
+    startupId: 'ST-001',
+    startupName: 'AgriVision AI Labs',
+    testbedLocation: 'Varanasi Rural Block (32 Village Societies)',
+    startDate: '2026-07-01',
+    targetEndDate: '2026-12-31',
+    overallProgress: 68,
+    healthStatus: 'on_track', // 'on_track' | 'at_risk' | 'delayed' | 'completed'
+    sanctionedBudget: 1500000,
+    disbursedBudget: 900000,
+    currentMilestone: 'Milestone 3: 500 Farm Device Deployments',
+    nextReviewDate: '2026-09-10',
+    slaAdherenceRate: 97.4,
+    telemetryStatus: 'Active (512 connected sensors)'
+  },
+  {
+    id: 'PLT-502',
+    challengeId: 'CH-2026-104',
+    challengeTitle: 'Offline-First Tele-Diagnostics Device',
+    startupId: 'ST-003',
+    startupName: 'Sanjeevani MedSystems',
+    testbedLocation: 'Bastar District Tribal Health Network (18 PHCs)',
+    startDate: '2026-05-15',
+    targetEndDate: '2026-10-15',
+    overallProgress: 92,
+    healthStatus: 'completed',
+    sanctionedBudget: 2500000,
+    disbursedBudget: 2500000,
+    currentMilestone: 'Milestone 4: Third-party STQC Audit & Clinical Validation',
+    nextReviewDate: '2026-09-01',
+    slaAdherenceRate: 99.1,
+    telemetryStatus: 'Audit Ready (2,400+ diagnostic sessions recorded)'
+  },
+  {
+    id: 'PLT-503',
+    challengeId: 'CH-2026-092',
+    challengeTitle: 'Edge Computer Vision Traffic Alleviation',
+    startupId: 'ST-002',
+    startupName: 'FlowMobility Tech',
+    testbedLocation: 'Pune Municipal Corridor (12 Junctions)',
+    startDate: '2026-08-01',
+    targetEndDate: '2026-11-30',
+    overallProgress: 35,
+    healthStatus: 'at_risk',
+    sanctionedBudget: 2000000,
+    disbursedBudget: 600000,
+    currentMilestone: 'Milestone 2: Camera Feed Sync & Optical Flow Tuning',
+    nextReviewDate: '2026-09-04',
+    slaAdherenceRate: 84.0,
+    telemetryStatus: 'Warning (2 junction edge nodes offline due to power outage)'
+  }
+];
