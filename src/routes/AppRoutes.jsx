@@ -3,6 +3,7 @@ import { Routes, Route, Navigate, Outlet } from 'react-router-dom';
 import { PublicLayout } from '../layouts/PublicLayout';
 import { DashboardLayout } from '../layouts/DashboardLayout';
 import { GovernmentPortalProvider } from '../context/GovernmentPortalContext';
+import { StartupPortalProvider } from '../context/StartupPortalContext';
 
 // Public Pages
 import { HomePage } from '../pages/public/HomePage';
@@ -20,6 +21,25 @@ import { ShortlistedStartupsPage } from '../pages/government/ShortlistedStartups
 import { ActivePilotsPage } from '../pages/government/ActivePilotsPage';
 import { PilotAlertsPage } from '../pages/government/PilotAlertsPage';
 import { PendingActionsPage } from '../pages/government/PendingActionsPage';
+import { GovernmentSettingsPage } from '../pages/government/GovernmentSettingsPage';
+
+// Startup Portal Pages
+import {
+  StartupDashboardPage,
+  DiscoverOpportunitiesPage,
+  OpportunityDetailsPage,
+  ApplicationWizardPage,
+  MyApplicationsPage,
+  ApplicationDetailsPage,
+  ClarificationResponsePage,
+  StartupDocumentsPage,
+  StartupProfilePage,
+  StartupSelfAssessmentPage,
+  StartupSchemesPage,
+  StartupNotificationsPage,
+  StartupPilotsPage,
+  StartupPilotDetailsPage
+} from '../pages/startup';
 
 export function AppRoutes() {
   return (
@@ -196,13 +216,7 @@ export function AppRoutes() {
           />
           <Route
             path="settings"
-            element={
-              <PlaceholderPage
-                title="Department Settings & Permissions"
-                role="Government"
-                description="Manage nodal officer roles, RFP approval thresholds, and security parameters."
-              />
-            }
+            element={<GovernmentSettingsPage />}
           />
           <Route
             path="profile"
@@ -227,68 +241,52 @@ export function AppRoutes() {
         </Route>
 
         {/* Startup Portal */}
-        <Route path="/startup">
+        <Route
+          path="/startup"
+          element={
+            <StartupPortalProvider>
+              <Outlet />
+            </StartupPortalProvider>
+          }
+        >
           <Route index element={<Navigate to="/startup/dashboard" replace />} />
-          <Route
-            path="dashboard"
-            element={
-              <PlaceholderPage
-                title="Startup Innovation Dashboard"
-                role="Startup"
-                description="Track live applications, testbed milestones, and grant releases."
-              />
-            }
-          />
-          <Route
-            path="challenges"
-            element={
-              <PlaceholderPage
-                title="Browse Department Challenges"
-                role="Startup"
-                description="Apply to problem statements matching your technology stack."
-              />
-            }
-          />
-          <Route
-            path="applications"
-            element={
-              <PlaceholderPage
-                title="My Challenge Applications"
-                role="Startup"
-                description="Status of submitted technical dossiers and jury reviews."
-              />
-            }
-          />
-          <Route
-            path="pilots"
-            element={
-              <PlaceholderPage
-                title="Active Sandbox Pilots"
-                role="Startup"
-                description="Upload telemetry data and request milestone verification inspections."
-              />
-            }
-          />
-          <Route
-            path="payments"
-            element={
-              <PlaceholderPage
-                title="Escrow Account & Payout Status"
-                role="Startup"
-                description="Track PFMS grant disbursements and milestone invoices."
-              />
-            }
-          />
-          <Route
-            path="profile"
-            element={
-              <PlaceholderPage
-                title="Startup DPIIT Profile & IP Portfolio"
-                role="Startup"
-                description="Manage patents, incorporation details, and team profiles."
-              />
-            }
-          />
+          <Route path="dashboard" element={<StartupDashboardPage />} />
+          
+          {/* Opportunities / RFP Discovery */}
+          <Route path="opportunities" element={<DiscoverOpportunitiesPage />} />
+          <Route path="opportunities/:id" element={<OpportunityDetailsPage />} />
+          <Route path="challenges" element={<DiscoverOpportunitiesPage />} />
+          <Route path="challenges/:id" element={<OpportunityDetailsPage />} />
+
+          {/* Applications */}
+          <Route path="applications" element={<MyApplicationsPage />} />
+          <Route path="applications/new/:opportunityId" element={<ApplicationWizardPage />} />
+          <Route path="applications/:id" element={<ApplicationDetailsPage />} />
+          <Route path="applications/:id/edit" element={<ApplicationWizardPage />} />
+          <Route path="applications/:id/clarifications" element={<ClarificationResponsePage />} />
+
+          {/* Clarifications Desk */}
+          <Route path="clarifications" element={<ClarificationResponsePage />} />
+
+          {/* Active Sandbox Pilots & Telemetry */}
+          <Route path="pilots" element={<StartupPilotsPage />} />
+          <Route path="pilots/:id" element={<StartupPilotDetailsPage />} />
+          <Route path="payments" element={<StartupPilotsPage />} />
+
+          {/* Compliance Documents Vault */}
+          <Route path="documents" element={<StartupDocumentsPage />} />
+
+          {/* Company Profile */}
+          <Route path="profile" element={<StartupProfilePage />} />
+
+          {/* Evaluation Framework & Self-Assessment */}
+          <Route path="self-assessment" element={<StartupSelfAssessmentPage />} />
+
+          {/* Government Schemes & Grants */}
+          <Route path="schemes" element={<StartupSchemesPage />} />
+
+          {/* Notifications */}
+          <Route path="notifications" element={<StartupNotificationsPage />} />
         </Route>
 
         {/* Expert Portal */}

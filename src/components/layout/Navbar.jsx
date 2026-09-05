@@ -7,16 +7,21 @@ import {
   User,
   LogOut,
   ExternalLink,
-  Settings
+  Settings,
+  Bell,
+  Building2,
+  FileCheck
 } from 'lucide-react';
 import { GovHeaderBar } from './GovHeaderBar';
 import { ThemeToggle } from '../ui/ThemeToggle';
 import sarkarLogo from '../../assets/sarkar-setu-logo.jpg';
 import { CURRENT_OFFICER } from '../../data/mockData';
 
-export function Navbar({ onMenuToggle, isSidebarOpen }) {
+export function Navbar({ onMenuToggle, isSidebarOpen, portalRole = 'government' }) {
   const [showUserMenu, setShowUserMenu] = useState(false);
   const navigate = useNavigate();
+
+  const isStartup = portalRole === 'startup';
 
   return (
     <div className="sticky top-0 z-30 flex flex-col">
@@ -40,7 +45,10 @@ export function Navbar({ onMenuToggle, isSidebarOpen }) {
               {isSidebarOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
 
-            <Link to="/government/dashboard" className="flex items-center gap-2.5 group shrink-0">
+            <Link
+              to={isStartup ? "/startup/dashboard" : "/government/dashboard"}
+              className="flex items-center gap-2.5 group shrink-0"
+            >
               <img
                 src={sarkarLogo}
                 alt="Sarkar Setu"
@@ -51,19 +59,30 @@ export function Navbar({ onMenuToggle, isSidebarOpen }) {
                   Sarkar Setu
                 </span>
                 <span className="text-[10px] text-zinc-500 dark:text-zinc-400 font-medium tracking-wide mt-1 hidden sm:inline">
-                  Innovations for a Stronger Bharat
+                  {isStartup ? 'Startup Innovation Desk • DPIIT Portal' : 'Innovations for a Stronger Bharat'}
                 </span>
               </div>
             </Link>
           </div>
 
-          {/* Right Actions: Theme Toggle, Notifications, Officer Profile */}
+          {/* Right Actions: Theme Toggle, Notifications, Officer/Startup Profile */}
           <div className="flex items-center gap-2 sm:gap-3">
             {/* Theme Toggle Button */}
             <ThemeToggle />
 
+            {/* Startup Notifications Bell if on Startup Portal */}
+            {isStartup && (
+              <Link
+                to="/startup/notifications"
+                className="p-2 rounded-xl text-zinc-600 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors relative"
+                title="Notifications"
+              >
+                <Bell className="w-5 h-5" />
+                <span className="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-orange-600 rounded-full ring-2 ring-white dark:ring-zinc-900" />
+              </Link>
+            )}
 
-            {/* Officer Profile Avatar & Info */}
+            {/* Profile Avatar & Info Dropdown */}
             <div className="relative">
               <button
                 type="button"
@@ -71,14 +90,14 @@ export function Navbar({ onMenuToggle, isSidebarOpen }) {
                 className="flex items-center gap-2.5 p-1 sm:px-2 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer"
               >
                 <div className="w-8 h-8 rounded-full bg-orange-600 text-white flex items-center justify-center text-xs font-black shadow-xs">
-                  {CURRENT_OFFICER.initials}
+                  {isStartup ? 'PD' : CURRENT_OFFICER.initials}
                 </div>
                 <div className="text-left hidden md:block">
                   <div className="text-xs font-bold text-zinc-950 dark:text-zinc-100 leading-tight">
-                    {CURRENT_OFFICER.name}
+                    {isStartup ? 'Pooja Deshmukh' : CURRENT_OFFICER.name}
                   </div>
                   <div className="text-[11px] text-zinc-500 dark:text-zinc-400 leading-tight font-medium">
-                    {CURRENT_OFFICER.role}
+                    {isStartup ? 'AquaSense (STU-94821)' : CURRENT_OFFICER.role}
                   </div>
                 </div>
                 <ChevronDown className="w-3.5 h-3.5 text-zinc-400 hidden md:block" />
@@ -86,25 +105,50 @@ export function Navbar({ onMenuToggle, isSidebarOpen }) {
 
               {showUserMenu && (
                 <div
-                  className="absolute right-0 mt-2 w-56 bg-white dark:bg-zinc-900 rounded-2xl shadow-dropdown border border-zinc-200 dark:border-zinc-800 p-2 z-50 animate-in fade-in"
+                  className="absolute right-0 mt-2 w-64 bg-white dark:bg-zinc-900 rounded-2xl shadow-dropdown border border-zinc-200 dark:border-zinc-800 p-2 z-50 animate-in fade-in"
                   onMouseLeave={() => setShowUserMenu(false)}
                 >
                   <div className="px-3 py-2.5 border-b border-zinc-100 dark:border-zinc-800">
-                    <p className="text-xs font-bold text-zinc-900 dark:text-zinc-100">{CURRENT_OFFICER.name}</p>
-                    <p className="text-[11px] text-zinc-500 dark:text-zinc-400 font-mono truncate">{CURRENT_OFFICER.email}</p>
+                    <p className="text-xs font-bold text-zinc-900 dark:text-zinc-100">
+                      {isStartup ? 'AquaSense Innovations Pvt Ltd' : CURRENT_OFFICER.name}
+                    </p>
+                    <p className="text-[11px] text-zinc-500 dark:text-zinc-400 font-mono truncate">
+                      {isStartup ? 'pooja.deshmukh@aquasense.io' : CURRENT_OFFICER.email}
+                    </p>
                     <span className="inline-block mt-1 text-[10px] font-semibold text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-950/40 px-2 py-0.5 rounded">
-                      {CURRENT_OFFICER.role}
+                      {isStartup ? 'DPIIT DIPP94821 • TRL 7' : CURRENT_OFFICER.role}
                     </span>
                   </div>
                   <div className="py-1">
-                    <Link
-                      to="/government/settings"
-                      onClick={() => setShowUserMenu(false)}
-                      className="flex items-center gap-2 px-3 py-2 text-xs text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-xl font-medium"
-                    >
-                      <Settings className="w-4 h-4 text-zinc-400" />
-                      Settings & Preferences
-                    </Link>
+                    {isStartup ? (
+                      <>
+                        <Link
+                          to="/startup/profile"
+                          onClick={() => setShowUserMenu(false)}
+                          className="flex items-center gap-2 px-3 py-2 text-xs text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-xl font-medium"
+                        >
+                          <Building2 className="w-4 h-4 text-zinc-400" />
+                          Company Profile
+                        </Link>
+                        <Link
+                          to="/startup/documents"
+                          onClick={() => setShowUserMenu(false)}
+                          className="flex items-center gap-2 px-3 py-2 text-xs text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-xl font-medium"
+                        >
+                          <FileCheck className="w-4 h-4 text-zinc-400" />
+                          Document Vault
+                        </Link>
+                      </>
+                    ) : (
+                      <Link
+                        to="/government/settings"
+                        onClick={() => setShowUserMenu(false)}
+                        className="flex items-center gap-2 px-3 py-2 text-xs text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 rounded-xl font-medium"
+                      >
+                        <Settings className="w-4 h-4 text-zinc-400" />
+                        Settings & Preferences
+                      </Link>
+                    )}
                     <Link
                       to="/login"
                       onClick={() => setShowUserMenu(false)}

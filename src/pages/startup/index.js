@@ -1,2 +1,14 @@
-// Startup portal pages (Phase 3)
-export {};
+export { StartupDashboardPage } from './StartupDashboardPage';
+export { DiscoverOpportunitiesPage } from './DiscoverOpportunitiesPage';
+export { OpportunityDetailsPage } from './OpportunityDetailsPage';
+export { ApplicationWizardPage } from './ApplicationWizardPage';
+export { MyApplicationsPage } from './MyApplicationsPage';
+export { ApplicationDetailsPage } from './ApplicationDetailsPage';
+export { ClarificationResponsePage } from './ClarificationResponsePage';
+export { StartupDocumentsPage } from './StartupDocumentsPage';
+export { StartupProfilePage } from './StartupProfilePage';
+export { StartupSelfAssessmentPage } from './StartupSelfAssessmentPage';
+export { StartupSchemesPage } from './StartupSchemesPage';
+export { StartupNotificationsPage } from './StartupNotificationsPage';
+export { StartupPilotsPage } from './StartupPilotsPage';
+export { StartupPilotDetailsPage } from './StartupPilotDetailsPage';

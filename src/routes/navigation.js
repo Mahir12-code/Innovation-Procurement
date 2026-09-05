@@ -15,7 +15,10 @@ import {
   MessageSquare,
   Settings,
   HelpCircle,
-  User
+  User,
+  Bell,
+  FileCheck,
+  Coins
 } from 'lucide-react';
 
 export const PORTAL_NAV_CONFIG = {
@@ -77,10 +80,12 @@ export const PORTAL_NAV_CONFIG = {
     badge: 'Startup View',
     items: [
       { name: 'Dashboard', path: '/startup/dashboard', icon: LayoutDashboard },
-      { name: 'Browse Challenges', path: '/startup/challenges', icon: Target },
-      { name: 'My Applications', path: '/startup/applications', icon: FileText },
-      { name: 'Active Sandbox Pilots', path: '/startup/pilots', icon: Rocket },
-      { name: 'Milestone Payouts', path: '/startup/payments', icon: CreditCard },
+      { name: 'Opportunities', path: '/startup/opportunities', icon: Target },
+      { name: 'Applications', path: '/startup/applications', icon: FileText },
+      { name: 'Pilot Execution Tracker', path: '/startup/pilots', icon: Rocket },
+      { name: 'Clarifications', path: '/startup/clarifications', icon: MessageSquare },
+      { name: 'Document Vault', path: '/startup/documents', icon: FileCheck },
+      { name: 'Schemes & Grants', path: '/startup/schemes', icon: Coins },
       { name: 'Company Profile', path: '/startup/profile', icon: Building2 }
     ]
   },
