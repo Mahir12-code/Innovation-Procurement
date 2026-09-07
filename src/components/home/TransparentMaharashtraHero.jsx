@@ -114,7 +114,7 @@ export function TransparentMaharashtraHero() {
             <div className="lg:col-span-4 p-5 rounded-2xl bg-black/60 backdrop-blur-md border border-orange-500/30 space-y-2.5">
               <div className="flex items-center gap-2 text-orange-400 font-black text-xs uppercase tracking-wider">
                 <Sparkles className="w-4 h-4" />
-                <span>State Sandbox Guarantee</span>
+                <span>State Pilot Zone Guarantee</span>
               </div>
               <p className="text-xs text-zinc-300 leading-relaxed font-medium">
                 Direct procurement bypasses multi-year tender hurdles with milestone-linked escrow grants for Indian startups.
@@ -203,7 +203,7 @@ export function TransparentMaharashtraHero() {
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 rounded-full bg-orange-500 animate-pulse"></span>
             <h3 className="text-sm sm:text-base font-black tracking-tight text-white">
-              Maharashtra Innovation Sandbox & Procurement Gateway
+              Maharashtra Innovation Pilot Zone & Procurement Gateway
             </h3>
           </div>
           <p className="text-xs text-zinc-400 font-medium">

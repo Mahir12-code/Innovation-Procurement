@@ -17,7 +17,7 @@ export function Footer() {
               <span className="font-black text-white text-base tracking-tight">Sarkar Setu</span>
             </div>
             <p className="text-zinc-400 text-xs max-w-md leading-relaxed font-medium">
-              Empowering government departments to discover, test in sandboxes, and rapidly scale groundbreaking innovations from verified Indian startups.
+              Empowering government departments to discover, test in pilot zones, and rapidly scale groundbreaking innovations from verified Indian startups.
             </p>
             <div className="pt-1 flex items-center gap-2 text-[11px] text-zinc-500 font-medium">
               <span>Digital India Initiative</span>
@@ -83,7 +83,7 @@ export function Footer() {
           <p>© {new Date().getFullYear()} Sarkar Setu. All rights reserved.</p>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-            <span className="text-orange-400 font-mono font-bold">Phase 1 Sandbox Ready</span>
+            <span className="text-orange-400 font-mono font-bold">Phase 1 Pilot Zone Ready</span>
           </div>
         </div>
       </div>

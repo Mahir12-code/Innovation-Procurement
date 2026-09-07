@@ -166,14 +166,39 @@ export function GovernmentDashboard() {
   return (
     <div className="space-y-8 pb-12 max-w-7xl mx-auto">
       {/* -------------------------------------------------- */}
-      {/* 1. WELCOME & GREETING SECTION */}
+      {/* 1. GOVERNMENT DASHBOARD HEADING */}
       {/* -------------------------------------------------- */}
-      <div className="space-y-2 pt-2">
+      <div className="border-b border-zinc-200/80 dark:border-zinc-800 pb-5 space-y-2">
+        <div className="flex items-center gap-2">
+          <span className="text-[11px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-orange-50 dark:bg-orange-950/40 text-orange-700 dark:text-orange-400 border border-orange-200/80 dark:border-orange-800/60">
+            Government Portal
+          </span>
+          <span className="text-xs text-zinc-400 dark:text-zinc-600 font-bold">•</span>
+          <span className="text-xs text-zinc-500 dark:text-zinc-400 font-semibold">
+            Government of Maharashtra
+          </span>
+        </div>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h1 className="text-2xl sm:text-3xl font-black text-zinc-950 dark:text-white tracking-tight">
+              Government Dashboard
+            </h1>
+            <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 font-medium mt-1">
+              Procurement, pilot trials & startup innovation management desk
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* -------------------------------------------------- */}
+      {/* 2. WELCOME & GREETING SECTION */}
+      {/* -------------------------------------------------- */}
+      <div className="space-y-2 pt-1">
         <div className="w-12 h-1 bg-orange-600 rounded-full" />
-        <h1 className="text-2xl sm:text-3xl font-extrabold text-zinc-950 dark:text-white tracking-tight leading-tight">
+        <h2 className="text-xl sm:text-2xl font-extrabold text-zinc-950 dark:text-white tracking-tight leading-tight">
           Welcome Back,<br />
           <span className="text-zinc-900 dark:text-zinc-100">Dr. Rajesh Sharma</span>
-        </h1>
+        </h2>
         <p className="text-sm text-zinc-500 dark:text-zinc-400 font-medium">
           Let's drive innovation for a stronger Bharat.
         </p>

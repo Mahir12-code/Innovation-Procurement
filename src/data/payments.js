@@ -14,7 +14,7 @@ export const PAYMENTS = [
     id: 'TXN-8802',
     pilotId: 'PLT-503',
     startupName: 'FlowMobility Tech',
-    milestoneName: 'Tranche 1: Sandbox Inception & Hardware Procurement',
+    milestoneName: 'Tranche 1: Pilot Zone Inception & Hardware Procurement',
     amount: 600000,
     status: 'disbursed',
     payoutDate: '2026-08-05',

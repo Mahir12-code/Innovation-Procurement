@@ -92,7 +92,7 @@ export function MyApplicationsPage() {
             My Applications
           </h1>
           <p className="text-xs text-zinc-500 mt-1">
-            Track submitted technical dossiers, jury evaluation milestones, and pilot sandbox selections
+            Track submitted technical dossiers, jury evaluation milestones, and pilot zone selections
           </p>
         </div>
 
@@ -243,7 +243,7 @@ export function MyApplicationsPage() {
                           to="/startup/pilots/PLT-MH-001"
                           className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl shadow-xs transition-colors flex items-center gap-1.5"
                         >
-                          <Rocket className="w-3.5 h-3.5" /> Open Pilot Sandbox
+                          <Rocket className="w-3.5 h-3.5" /> Open Pilot Zone
                         </Link>
                         <Link
                           to={`/startup/applications/${app.id}`}

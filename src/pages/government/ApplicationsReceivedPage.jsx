@@ -307,10 +307,10 @@ export function ApplicationsReceivedPage() {
                     size="sm"
                     onClick={() => {
                       setSelectedApp(null);
-                      navigate('/government/applications/evaluation');
+                      navigate('/government/evaluator');
                     }}
                   >
-                    Go to Evaluation
+                    Go to Evaluator Desk
                   </Button>
                 )}
                 <Button

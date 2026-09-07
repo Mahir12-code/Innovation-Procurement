@@ -132,7 +132,7 @@ const PROCUREMENT_READINESS_OPTIONS = [
   {
     id: 'Need Government Pilot Support',
     title: 'Need Government Pilot Support',
-    desc: 'Seeking test facility access, mentorship, or regulatory sandbox.',
+    desc: 'Seeking test facility access, mentorship, or regulatory pilot zone.',
   },
 ];
 
@@ -335,7 +335,7 @@ export function RegisterPage() {
         <div className="text-center space-y-2">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 dark:bg-orange-950/40 text-orange-700 dark:text-orange-300 border border-orange-200/80 dark:border-orange-800/60 text-xs font-bold">
             <ShieldCheck className="w-3.5 h-3.5 text-orange-600 dark:text-orange-400" />
-            <span>Government of Maharashtra • Innovation Sandbox</span>
+            <span>Government of Maharashtra • Innovation Pilot Zone</span>
           </div>
 
           <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-zinc-950 dark:text-white">

@@ -88,7 +88,7 @@ export function StartupNotificationsPage() {
           { id: 'all', label: 'All Notifications' },
           { id: 'unread', label: `Unread (${unreadNotificationsCount})` },
           { id: 'clarification', label: 'Clarifications & Actions' },
-          { id: 'pilot', label: 'Pilot Sandbox Alerts' }
+          { id: 'pilot', label: 'Pilot Zone Alerts' }
         ].map((tab) => (
           <button
             key={tab.id}

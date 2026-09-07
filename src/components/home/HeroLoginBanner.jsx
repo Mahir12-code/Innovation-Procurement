@@ -107,7 +107,7 @@ export function HeroLoginBanner() {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Instant DPIIT Verification & Sandbox Approvals</span>
+                <span>Instant DPIIT Verification & Pilot Zone Approvals</span>
               </div>
             </div>
           </div>

@@ -207,7 +207,7 @@ export function PilotOverview() {
                 </span>
               </div>
               <div className="flex justify-between">
-                <span className="text-zinc-500">Sandbox Testbed:</span>
+                <span className="text-zinc-500">Pilot Zone Testbed:</span>
                 <span className="font-bold text-zinc-900 dark:text-white">
                   {selectedPilot.testbed}
                 </span>

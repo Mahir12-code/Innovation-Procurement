@@ -81,8 +81,8 @@ export const PROCUREMENT_STEPS = [
     status: 'completed',
     statusLabel: 'Completed',
     count: 5,
-    whatHappens: 'The top startup works with the department to define sandbox boundaries, safety safeguards, success metrics, and milestone-linked payment schedules.',
-    keyOutput: 'Signed Sandbox Agreement & Escrow Setup',
+    whatHappens: 'The top startup works with the department to define pilot zone boundaries, safety safeguards, success metrics, and milestone-linked payment schedules.',
+    keyOutput: 'Signed Pilot Zone Agreement & Escrow Setup',
     activeChallengesCount: 5,
     actionLabel: 'View Pilot Charters',
     actionRoute: '/government/pilots',
@@ -98,7 +98,7 @@ export const PROCUREMENT_STEPS = [
     whatHappens: 'The startup deploys hardware and software on-site (e.g. 500 farms in Varanasi, 12 traffic junctions in Pune) with live telemetry tracking.',
     keyOutput: 'Live IoT Telemetry & Weekly Field Logs',
     activeChallengesCount: 7,
-    actionLabel: 'Inspect Sandbox Telemetry',
+    actionLabel: 'Inspect Pilot Zone Telemetry',
     actionRoute: '/government/pilots',
     timeframe: 'Month 3-6'
   },
@@ -173,7 +173,7 @@ export const KPIS_DATA = [
     value: '3',
     change: '2 On-Track, 1 Being Checked',
     trend: 'neutral',
-    subtitle: '₹60 Lakhs in sandbox grants',
+    subtitle: '₹60 Lakhs in pilot zone grants',
     icon: 'Rocket',
     color: 'blue'
   },

@@ -45,23 +45,43 @@ export function StartupDashboardPage() {
   return (
     <div className="space-y-6 pb-16 max-w-7xl mx-auto">
       {/* -------------------------------------------------- */}
-      {/* 1. MINIMAL GREETING BANNER (NO REDUNDANT BUTTONS)  */}
+      {/* 1. STARTUP DASHBOARD HEADING */}
       {/* -------------------------------------------------- */}
-      <div className="border-b border-zinc-200/80 dark:border-zinc-800 pb-5">
-        <div className="flex flex-wrap items-center gap-2 mb-2">
-          <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-orange-50 dark:bg-orange-950/40 text-orange-700 dark:text-orange-400 border border-orange-200 dark:border-orange-800/60">
-            DPIIT Verified: {profile.dpiitNumber}
+      <div className="border-b border-zinc-200/80 dark:border-zinc-800 pb-5 space-y-2">
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-[11px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-orange-50 dark:bg-orange-950/40 text-orange-700 dark:text-orange-400 border border-orange-200/80 dark:border-orange-800/60">
+            Startup Portal
           </span>
-          <span className="text-xs text-zinc-400">•</span>
-          <span className="text-xs text-zinc-500 dark:text-zinc-400 font-medium">
+          <span className="text-xs text-zinc-400 dark:text-zinc-600 font-bold">•</span>
+          <span className="text-xs text-zinc-500 dark:text-zinc-400 font-semibold">
+            DPIIT: {profile.dpiitNumber}
+          </span>
+          <span className="text-xs text-zinc-400 dark:text-zinc-600 font-bold">•</span>
+          <span className="text-xs text-zinc-500 dark:text-zinc-400 font-semibold">
             {profile.stage}
           </span>
         </div>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h1 className="text-2xl sm:text-3xl font-black text-zinc-950 dark:text-white tracking-tight">
+              Startup Dashboard
+            </h1>
+            <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 font-medium mt-1">
+              Innovation procurement, challenge proposals & pilot execution tracker
+            </p>
+          </div>
+        </div>
+      </div>
 
-        <h1 className="text-2xl sm:text-3xl font-black text-zinc-950 dark:text-white tracking-tight">
-          Welcome, {profile.founderName} 👋
-        </h1>
-        <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-1">
+      {/* -------------------------------------------------- */}
+      {/* 2. GREETING BANNER */}
+      {/* -------------------------------------------------- */}
+      <div className="space-y-1 pt-1">
+        <div className="w-12 h-1 bg-orange-600 rounded-full" />
+        <h2 className="text-xl sm:text-2xl font-extrabold text-zinc-950 dark:text-white tracking-tight leading-tight">
+          Welcome, {profile.founderName}
+        </h2>
+        <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400">
           <strong className="text-zinc-900 dark:text-zinc-200 font-bold">{profile.name}</strong> — Government of Maharashtra Innovation Procurement Desk
         </p>
       </div>
@@ -123,7 +143,7 @@ export function StartupDashboardPage() {
             {pilots.length}
           </div>
           <span className="text-[11px] text-zinc-500 dark:text-zinc-400 font-medium mt-1 block">
-            ₹35L Sanctioned Sandbox
+            ₹35L Sanctioned Pilot Zone
           </span>
         </div>
 
@@ -151,41 +171,9 @@ export function StartupDashboardPage() {
         </div>
       </div>
 
-      {/* -------------------------------------------------- */}
-      {/* 3. URGENT CLARIFICATION BANNER (MINIMAL & FOCUSED)  */}
-      {/* -------------------------------------------------- */}
-      {openClarifications.length > 0 && (
-        <div className="p-4 sm:p-5 rounded-2xl bg-amber-50/70 dark:bg-amber-950/20 border border-amber-200/80 dark:border-amber-800/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div className="flex items-start gap-3">
-            <div className="p-2 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5">
-              <AlertCircle className="w-5 h-5" />
-            </div>
-            <div className="space-y-0.5 text-xs">
-              <span className="font-bold text-amber-950 dark:text-amber-200 block text-sm">
-                Clarification Required on Application {openClarifications[0].applicationId}
-              </span>
-              <p className="text-amber-800 dark:text-amber-300">
-                {openClarifications[0].requestTitle} — Requested by{' '}
-                <strong>{openClarifications[0].department}</strong>
-              </p>
-            </div>
-          </div>
-
-          <button
-            onClick={() =>
-              navigate(
-                `/startup/applications/${openClarifications[0].applicationId}/clarifications`
-              )
-            }
-            className="px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold rounded-xl transition-colors shrink-0 flex items-center gap-1.5 cursor-pointer shadow-xs"
-          >
-            Respond Now <ArrowRight className="w-3.5 h-3.5" />
-          </button>
-        </div>
-      )}
 
       {/* -------------------------------------------------- */}
-      {/* 4. ACTIVE SANDBOX PILOT SHOWCASE (CLEAN, NO CLUTTER)*/}
+      {/* 4. ACTIVE PILOT ZONE SHOWCASE (CLEAN, NO CLUTTER)*/}
       {/* -------------------------------------------------- */}
       {activePilot && (
         <div

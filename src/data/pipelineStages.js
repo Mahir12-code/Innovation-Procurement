@@ -54,7 +54,7 @@ export const PIPELINE_STAGES = [
     key: 'pilot_designed',
     name: 'Pilot Designed',
     shortName: 'Pilot Design',
-    description: 'Sandbox scoping, KPI baselining, safety protocol, and contract signing',
+    description: 'Pilot Zone scoping, KPI baselining, safety protocol, and contract signing',
     phase: 'Piloting',
     count: 5,
     color: 'purple'

@@ -21,7 +21,7 @@ export const GOVERNMENT_KPIS = [
   },
   {
     id: 'kpi-active-pilots',
-    title: 'Active Pilots in Sandbox',
+    title: 'Active Pilots in Pilot Zone',
     value: '3',
     change: '2 On-Track, 1 Reviewing',
     trend: 'neutral',
@@ -54,7 +54,7 @@ export const RISK_ALERTS = [
     id: 'risk-2',
     severity: 'info',
     title: 'DGCA Swarm Clearance Required',
-    description: 'Forest fire drone pilot application requires DGCA corridor waiver before sandbox launch.',
+    description: 'Forest fire drone pilot application requires DGCA corridor waiver before pilot zone launch.',
     timestamp: '5 hours ago',
     actionRequired: 'Forward to Nodal Aviation Desk'
   }

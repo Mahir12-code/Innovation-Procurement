@@ -27,7 +27,7 @@ export function BudgetProgressWidget() {
               </CardTitle>
             </div>
             <CardDescription className="mt-0.5">
-              Maharashtra sandbox grant allocations & milestone disbursements.
+              Maharashtra pilot zone grant allocations & milestone disbursements.
             </CardDescription>
           </div>
 

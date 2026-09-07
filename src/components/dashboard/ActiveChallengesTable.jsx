@@ -41,7 +41,7 @@ export function ActiveChallengesTable() {
             </CardTitle>
           </div>
           <CardDescription className="mt-0.5">
-            Open problem statements, sandbox tracks, and RFP opportunities for startups.
+            Open problem statements, pilot zone tracks, and RFP opportunities for startups.
           </CardDescription>
         </div>
 

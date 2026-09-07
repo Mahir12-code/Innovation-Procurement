@@ -153,7 +153,7 @@ export function OpportunityDetailsPage() {
 
             <div className="space-y-2 pt-2">
               <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
-                Expected Sandbox Outcome & Deliverables
+                Expected Pilot Zone Outcome & Deliverables
               </h3>
               <p className="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">
                 {opp.expectedOutcome}

@@ -1,2 +1,2 @@
-// Reusable components for Sandbox Pilots & Field Telemetry (Phase 5)
+// Reusable components for Pilot Zones & Field Telemetry (Phase 5)
 export {};

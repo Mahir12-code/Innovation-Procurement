@@ -360,7 +360,7 @@ export function ApplicationWizardPage() {
         {activeStep === 2 && (
           <div className="space-y-6">
             <div>
-              <h2 className="text-base font-bold text-zinc-950 dark:text-white">Step 2: Problem-Solution Fit & Sandbox Deployment</h2>
+              <h2 className="text-base font-bold text-zinc-950 dark:text-white">Step 2: Problem-Solution Fit & Pilot Zone Deployment</h2>
               <p className="text-xs text-zinc-500">Detail your technical architecture and operational deployment plan</p>
             </div>
 
@@ -636,7 +636,7 @@ export function ApplicationWizardPage() {
                     className="mt-0.5 rounded text-orange-600 focus:ring-orange-500 cursor-pointer"
                   />
                   <span>
-                    We agree to adhere to the Maharashtra State Innovation Society (MSInS) sandbox pilot guidelines
+                    We agree to adhere to the Maharashtra State Innovation Society (MSInS) pilot zone guidelines
                     and understand that final application submission locks the dossier against subsequent edits.
                   </span>
                 </label>

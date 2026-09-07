@@ -87,7 +87,7 @@ export function ApplicationDetailsPage() {
       note: 'Live field bench test of sensor communication and telemetry accuracy.'
     },
     {
-      title: 'Sandbox Pilot Sanction',
+      title: 'Pilot Zone Sanction',
       date: app.status === 'Selected for Pilot' ? '01 Sep 2026' : 'Upcoming',
       status: app.status === 'Selected for Pilot' ? 'completed' : 'upcoming',
       note: 'Official Government Resolution (GR) issued and escrow advance sanctioned.'
@@ -152,7 +152,7 @@ export function ApplicationDetailsPage() {
                 to="/startup/pilots/PLT-MH-001"
                 className="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-xl shadow-xs transition-colors flex items-center gap-2"
               >
-                <Rocket className="w-4 h-4" /> Manage Pilot Sandbox
+                <Rocket className="w-4 h-4" /> Manage Pilot Zone
               </Link>
             ) : (
               <div className="flex items-center gap-2 text-xs font-semibold text-zinc-500 bg-zinc-100 dark:bg-zinc-800 px-3 py-1.5 rounded-xl">
@@ -322,7 +322,7 @@ export function ApplicationDetailsPage() {
                   <p className="font-medium text-zinc-800 dark:text-zinc-200">{app.testbedRequirements || '20km open canal embankment with cellular 4G or LoRa gateway line-of-sight'}</p>
                 </div>
                 <div>
-                  <span className="text-zinc-500 block">Proposed Sandbox Duration:</span>
+                  <span className="text-zinc-500 block">Proposed Pilot Zone Duration:</span>
                   <p className="font-medium text-zinc-800 dark:text-zinc-200">{app.pilotTimelineWeeks || 12} Weeks</p>
                 </div>
               </div>

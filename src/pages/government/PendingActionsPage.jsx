@@ -117,7 +117,7 @@ export function PendingActionsPage() {
             </Badge>
           </div>
           <p className="text-sm text-zinc-500 dark:text-zinc-400">
-            Official departmental approvals, grant tranche authorizations, and sandbox MoUs awaiting your nodal signature.
+            Official departmental approvals, grant tranche authorizations, and pilot zone MoUs awaiting your nodal signature.
           </p>
         </div>
 

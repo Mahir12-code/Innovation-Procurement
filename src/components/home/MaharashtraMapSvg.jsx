@@ -69,7 +69,7 @@ export function MaharashtraMapSvg({ className = "w-full h-full opacity-20" }) {
         strokeOpacity="0.3"
       />
 
-      {/* Strategic Innovation Sandbox Hubs (Mumbai, Pune, Nagpur, Aurangabad, Nashik) */}
+      {/* Strategic Innovation Pilot Zone Hubs (Mumbai, Pune, Nagpur, Aurangabad, Nashik) */}
       {/* Mumbai */}
       <g transform="translate(110, 310)">
         <circle r="8" fill="#ea580c" fillOpacity="0.4" className="animate-ping" />

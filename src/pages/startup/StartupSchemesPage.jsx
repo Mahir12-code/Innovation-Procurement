@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Coins,
   Building2,
@@ -38,7 +39,7 @@ export function StartupSchemesPage() {
               Government Innovation Schemes
             </span>
             <span className="text-xs text-zinc-500 font-medium">
-              Financial Grants & Sandbox Subsidies
+              Financial Grants & Pilot Zone Subsidies
             </span>
           </div>
           <h1 className="text-2xl font-black text-zinc-950 dark:text-white tracking-tight">
@@ -49,6 +50,14 @@ export function StartupSchemesPage() {
             available for DPIIT-recognized startups in Maharashtra.
           </p>
         </div>
+
+        <Link
+          to="/schemes"
+          className="px-4 py-2.5 bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold rounded-xl shadow-xs transition-colors shrink-0 inline-flex items-center gap-2"
+        >
+          <BookOpen className="w-4 h-4" />
+          Public Schemes Directory (14 Programs) →
+        </Link>
       </div>
 
       {/* Search & Filter Bar */}

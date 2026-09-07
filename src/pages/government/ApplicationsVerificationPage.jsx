@@ -150,10 +150,10 @@ export function ApplicationsVerificationPage() {
           <Button
             variant="primary"
             size="sm"
-            onClick={() => navigate('/government/applications/evaluation')}
+            onClick={() => navigate('/government/evaluator')}
             className="text-xs shadow-sm"
           >
-            Go to Evaluation Desk
+            Go to Evaluator Desk
           </Button>
         </div>
       </div>

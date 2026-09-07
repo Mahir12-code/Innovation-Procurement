@@ -96,7 +96,7 @@ export function LoginPage() {
             </div>
 
             <p className="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed font-medium">
-              Select your role below to access your dedicated Maharashtra Innovation Sandbox and Procurement workspace.
+              Select your role below to access your dedicated Maharashtra Innovation Pilot Zone and Procurement workspace.
             </p>
           </div>
 

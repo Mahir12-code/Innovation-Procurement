@@ -38,8 +38,8 @@ export function ShortlistedStartupsPage() {
   const [isPilotModalOpen, setIsPilotModalOpen] = useState(false);
   const [selectedStartup, setSelectedStartup] = useState(null);
   const [pilotConfig, setPilotConfig] = useState({
-    location: 'Pune Municipal Smart City Sandbox (Zone 4)',
-    duration: '3 Months (Phase 1 Sandbox)',
+    location: 'Pune Municipal Smart City Pilot Zone (Zone 4)',
+    duration: '3 Months (Phase 1 Pilot Zone)',
     startDate: '2026-10-01',
     endDate: '2027-01-01',
     budget: '₹40 Lakhs',
@@ -78,8 +78,8 @@ export function ShortlistedStartupsPage() {
   const handleOpenPilotModal = (startup) => {
     setSelectedStartup(startup);
     setPilotConfig({
-      location: `${startup.department.includes('Urban') ? 'Pune Municipal Corporation' : startup.department.includes('Transport') ? 'Nagpur Traffic Control Hub' : 'Mumbai Central Health District'} Innovation Sandbox`,
-      duration: '3 Months (Phase 1 Sandbox)',
+      location: `${startup.department.includes('Urban') ? 'Pune Municipal Corporation' : startup.department.includes('Transport') ? 'Nagpur Traffic Control Hub' : 'Mumbai Central Health District'} Innovation Pilot Zone`,
+      duration: '3 Months (Phase 1 Pilot Zone)',
       startDate: '2026-10-01',
       endDate: '2027-01-01',
       budget: startup.sanctionedGrant || '₹40 Lakhs',
@@ -125,7 +125,7 @@ export function ShortlistedStartupsPage() {
             </button>
             <span className="text-zinc-300 dark:text-zinc-700">•</span>
             <span className="text-xs font-semibold text-orange-600 dark:text-orange-400">
-              Procurement Sandbox Selection
+              Procurement Pilot Zone Selection
             </span>
           </div>
           <div className="flex items-center gap-3">
@@ -133,11 +133,11 @@ export function ShortlistedStartupsPage() {
               Shortlisted Startups
             </h1>
             <Badge variant="success" size="md">
-              {shortlistedStartups.length} Cleared for Sandbox
+              {shortlistedStartups.length} Cleared for Pilot Zone
             </Badge>
           </div>
           <p className="text-sm text-zinc-500 dark:text-zinc-400">
-            High-scoring innovators that cleared statutory and jury gates, eligible for government sandbox pilot agreements and grant tranches.
+            High-scoring innovators that cleared statutory and jury gates, eligible for government pilot zone agreements and grant tranches.
           </p>
         </div>
 
@@ -185,9 +185,9 @@ export function ShortlistedStartupsPage() {
           onChange={(e) => setStatusFilter(e.target.value)}
           options={[
             { value: 'All', label: 'All Pilot Stages' },
-            { value: 'Ready for Sandbox', label: 'Ready for Sandbox' },
+            { value: 'Ready for Pilot Zone', label: 'Ready for Pilot Zone' },
             { value: 'Pilot Active', label: 'Pilot Active in Field' },
-            { value: 'Pilot Pending', label: 'Agreement / Sandbox Pending' }
+            { value: 'Pilot Pending', label: 'Agreement / Pilot Zone Pending' }
           ]}
           className="text-xs"
         />
@@ -313,8 +313,8 @@ export function ShortlistedStartupsPage() {
         <Modal
           isOpen={isPilotModalOpen}
           onClose={() => setIsPilotModalOpen(false)}
-          title={`Deploy Sandbox Pilot: ${selectedStartup.startupName}`}
-          description={`Issuing Sandbox Order for Challenge: ${selectedStartup.problemTitle}`}
+          title={`Deploy Pilot Zone: ${selectedStartup.startupName}`}
+          description={`Issuing Pilot Zone Order for Challenge: ${selectedStartup.problemTitle}`}
           maxWidth="max-w-xl"
           footer={
             <div className="flex items-center justify-end gap-2 w-full">

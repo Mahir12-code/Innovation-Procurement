@@ -7,6 +7,11 @@ import { StartupPortalProvider } from '../context/StartupPortalContext';
 
 // Public Pages
 import { HomePage } from '../pages/public/HomePage';
+import { AboutPage } from '../pages/public/AboutPage';
+import { StartupsSchemesPage } from '../pages/public/StartupsSchemesPage';
+import { StartupEligibilityPage } from '../pages/public/StartupEligibilityPage';
+import { StartupEvaluatorPage } from '../pages/public/StartupEvaluatorPage';
+import { PilotSandboxPage } from '../pages/public/PilotSandboxPage';
 import { LoginPage } from '../pages/public/LoginPage';
 import { RegisterPage } from '../pages/public/RegisterPage';
 import { PlaceholderPage } from '../pages/public/PlaceholderPage';
@@ -48,57 +53,13 @@ export function AppRoutes() {
       <Route element={<PublicLayout />}>
         <Route path="/" element={<HomePage />} />
         
-        {/* Navigation Routes requested by user */}
-        <Route
-          path="/about"
-          element={
-            <PlaceholderPage
-              title="About Sarkar Setu"
-              role="Public Information"
-              description="A startup-friendly public procurement bridge enabling Government of Maharashtra to discover, pilot, and scale innovation."
-            />
-          }
-        />
-        <Route
-          path="/schemes"
-          element={
-            <PlaceholderPage
-              title="Government Schemes & Innovation Tracks"
-              role="Government Schemes"
-              description="Explore government grants, sandbox subsidies, and procurement scale-up schemes for startups."
-            />
-          }
-        />
-        <Route
-          path="/evaluator"
-          element={
-            <PlaceholderPage
-              title="Evaluator & Technical Jury Portal"
-              role="Evaluation Desk"
-              description="Independent scoring matrix, IIT/STQC audit panels, and technical proposal assessments."
-            />
-          }
-        />
-        <Route
-          path="/pilot"
-          element={
-            <PlaceholderPage
-              title="Sandbox Pilot Testing Framework"
-              role="Sandbox Operations"
-              description="Live field deployments, IoT telemetry monitoring, and milestone-linked tranche verifications."
-            />
-          }
-        />
-        <Route
-          path="/eligibility"
-          element={
-            <PlaceholderPage
-              title="Startup Eligibility Criteria"
-              role="Compliance & Guidelines"
-              description="DPIIT recognition guidelines, turnover exemptions, and innovation credential requirements."
-            />
-          }
-        />
+        {/* Navigation Routes */}
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/schemes" element={<StartupsSchemesPage />} />
+        <Route path="/schemes/:id" element={<StartupsSchemesPage />} />
+        <Route path="/evaluator" element={<StartupEvaluatorPage />} />
+        <Route path="/pilot" element={<PilotSandboxPage />} />
+        <Route path="/eligibility" element={<StartupEligibilityPage />} />
         <Route
           path="/initiatives"
           element={
@@ -117,7 +78,7 @@ export function AppRoutes() {
             <PlaceholderPage
               title="10-Stage Procurement SOP & Guidelines"
               role="Public Information"
-              description="Detailed operating procedure for startup discovery, sandbox piloting, and GeM scaling."
+              description="Detailed operating procedure for startup discovery, pilot zone testing, and GeM scaling."
             />
           }
         />
@@ -154,10 +115,12 @@ export function AppRoutes() {
           <Route path="challenges" element={<ActiveProblemStatementsPage />} />
           <Route path="applications" element={<ApplicationsReceivedPage />} />
           <Route path="applications/verification" element={<ApplicationsVerificationPage />} />
-          <Route path="applications/evaluation" element={<ApplicationsEvaluationPage />} />
-          <Route path="evaluation" element={<ApplicationsEvaluationPage />} />
+          <Route path="applications/evaluation" element={<Navigate to="/government/evaluator" replace />} />
+          <Route path="evaluator" element={<ApplicationsEvaluationPage />} />
+          <Route path="evaluator/:appId" element={<ApplicationsEvaluationPage />} />
           <Route path="shortlisted-startups" element={<ShortlistedStartupsPage />} />
           <Route path="pilots" element={<ActivePilotsPage />} />
+          <Route path="pilots/:pilotId" element={<ActivePilotsPage />} />
           <Route path="pilots/alerts" element={<PilotAlertsPage />} />
           <Route path="pending-actions" element={<PendingActionsPage />} />
           <Route
@@ -268,7 +231,7 @@ export function AppRoutes() {
           {/* Clarifications Desk */}
           <Route path="clarifications" element={<ClarificationResponsePage />} />
 
-          {/* Active Sandbox Pilots & Telemetry */}
+          {/* Active Pilot Zones & Telemetry */}
           <Route path="pilots" element={<StartupPilotsPage />} />
           <Route path="pilots/:id" element={<StartupPilotDetailsPage />} />
           <Route path="payments" element={<StartupPilotsPage />} />

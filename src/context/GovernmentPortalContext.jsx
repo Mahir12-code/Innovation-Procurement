@@ -738,7 +738,7 @@ export function GovernmentPortalProvider({ children }) {
       currentPhase: 'Planning & Setup',
       progress: 10,
       kpiStatus: 'On Track',
-      testbedLocation: details.location || 'Pune Municipal Innovation Sandbox',
+      testbedLocation: details.location || 'Pune Municipal Innovation Pilot Zone',
       grantBudget: details.budget || '₹40 Lakhs',
       disbursed: '₹10.0 Lakhs (Tranche 1)',
       officer: 'Shri Rajesh Sharma (Nodal Lead)',
@@ -760,7 +760,7 @@ export function GovernmentPortalProvider({ children }) {
       )
     );
 
-    showToast(`Sandbox pilot initiated for ${startupName}! Added to Active Pilots.`);
+    showToast(`Pilot Zone pilot initiated for ${startupName}! Added to Active Pilots.`);
   };
 
   const updatePilotKpi = (pilotId, progressDelta, newStatus) => {

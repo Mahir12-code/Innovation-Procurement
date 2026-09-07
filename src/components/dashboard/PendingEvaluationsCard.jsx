@@ -65,10 +65,10 @@ export function PendingEvaluationsCard() {
 
       <CardFooter className="py-2.5 px-4 text-xs text-slate-500">
         <Link
-          to="/government/evaluation"
+          to="/government/evaluator"
           className="text-gov-700 font-semibold hover:underline flex items-center gap-1"
         >
-          <span>Open evaluation committee view</span>
+          <span>Open evaluator committee view</span>
           <ArrowUpRight className="w-3.5 h-3.5" />
         </Link>
       </CardFooter>

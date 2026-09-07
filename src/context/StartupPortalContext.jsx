@@ -109,12 +109,12 @@ export const INITIAL_PUBLISHED_OPPORTUNITIES = [
       'GST Registration & Audited Balance Sheet (or Exemption Waiver)',
       'Product Cybersecurity Self-Declaration'
     ],
-    submissionRequirements: '5-step online submission via Sarkar Setu. Sandbox pilot agreements will be issued within 14 days of technical jury signoff.',
+    submissionRequirements: '5-step online submission via Sarkar Setu. Pilot Zone pilot agreements will be issued within 14 days of technical jury signoff.',
     importantDates: [
       { label: 'RFP Published', date: '15 Aug 2026' },
       { label: 'Application Deadline', date: '18 Sep 2026' },
       { label: 'Jury Evaluation Window', date: '20 Sep – 25 Sep 2026' },
-      { label: 'Pilot Sandbox Sanction', date: '01 Oct 2026' }
+      { label: 'Pilot Zone Sanction', date: '01 Oct 2026' }
     ]
   },
   {
@@ -241,8 +241,8 @@ export const INITIAL_STARTUP_APPLICATIONS = [
       { event: 'Application Submitted', date: '10 Aug 2026, 11:30 AM', status: 'completed' },
       { event: 'Eligibility Verification Passed', date: '14 Aug 2026, 04:15 PM', status: 'completed' },
       { event: 'Technical Jury Evaluation Completed', date: '21 Aug 2026, 02:40 PM', status: 'completed' },
-      { event: 'Shortlisted for Sandbox Pilot', date: '25 Aug 2026, 06:00 PM', status: 'completed' },
-      { event: 'Sandbox Pilot Sanctioned & Escrow Activated', date: '28 Aug 2026, 10:00 AM', status: 'completed' }
+      { event: 'Shortlisted for Pilot Zone', date: '25 Aug 2026, 06:00 PM', status: 'completed' },
+      { event: 'Pilot Zone Sanctioned & Escrow Activated', date: '28 Aug 2026, 10:00 AM', status: 'completed' }
     ],
     requiredActions: []
   },
@@ -489,11 +489,11 @@ export const INITIAL_STARTUP_PILOTS = [
     milestones: [
       {
         id: 'M1',
-        name: 'Milestone 1: Sandbox Charter Execution & Baseline Calibration',
+        name: 'Milestone 1: Pilot Zone Charter Execution & Baseline Calibration',
         targetDate: '2026-08-30',
         status: 'Completed',
         grantDisbursal: '₹10.5 Lakhs (30% Advance)',
-        description: 'Signing of tripartite sandbox charter, escrow setup, and baseline acoustic noise profiling in dry/wet conditions.'
+        description: 'Signing of tripartite pilot zone charter, escrow setup, and baseline acoustic noise profiling in dry/wet conditions.'
       },
       {
         id: 'M2',
@@ -619,8 +619,8 @@ export const INITIAL_STARTUP_NOTIFICATIONS = [
   {
     id: 'NOTIF-04',
     type: 'Selected for Pilot',
-    title: 'Selected for Sandbox Pilot Sanction!',
-    message: 'Congratulations! Application APP-2026-081 has been approved for Sandbox Pilot testing. Tranche 1 Escrow active.',
+    title: 'Selected for Pilot Zone Sanction!',
+    message: 'Congratulations! Application APP-2026-081 has been approved for Pilot Zone testing. Tranche 1 Escrow active.',
     timestamp: '28 Aug 2026, 10:00 AM',
     read: true,
     route: '/startup/pilots/PLT-MH-001'
@@ -639,7 +639,7 @@ export const INITIAL_STARTUP_NOTIFICATIONS = [
 export const INITIAL_STARTUP_SCHEMES = [
   {
     id: 'SCH-01',
-    title: 'Maharashtra State Innovation Society (MSInS) Sandbox Grant',
+    title: 'Maharashtra State Innovation Society (MSInS) Pilot Zone Grant',
     department: 'Skill Development & Innovation Department, GoM',
     fundingAmount: 'Up to ₹50 Lakhs direct pilot testbed grant',
     description: 'Provides 100% grant-in-aid to innovative startups piloting new tech in municipal corporations, Zilla Parishads, and state utilities without prior tendering history.',
@@ -654,16 +654,16 @@ export const INITIAL_STARTUP_SCHEMES = [
     fundingAmount: 'Up to ₹20 Lakhs grant for prototype validation & ₹50 Lakhs for commercialization',
     description: 'Financial assistance to startups for proof of concept, prototype development, product trials, market entry, and commercialization.',
     eligibility: 'Startups recognized by DPIIT with innovative business ideas capable of scaling.',
-    relevantOpportunity: 'Applicable for sandbox equipment fabrication',
+    relevantOpportunity: 'Applicable for pilot zone equipment fabrication',
     resourceLink: 'https://seedfund.startupindia.gov.in'
   },
   {
     id: 'SCH-03',
-    title: 'GeM Direct Onboarding for Verified Sandbox Pilots',
+    title: 'GeM Direct Onboarding for Verified Pilot Zones',
     department: 'Government e-Marketplace (GeM), GoI',
     fundingAmount: 'Direct Procurement Onboarding (Single Source Exemption)',
     description: 'Startups that successfully conclude field pilots on Sarkar Setu receive fast-track direct product catalogue onboarding under GeM Startup Runway.',
-    eligibility: 'Successful completion of government sandbox pilot with STQC technical verification sign-off.',
+    eligibility: 'Successful completion of government pilot zone with STQC technical verification sign-off.',
     relevantOpportunity: 'Post-pilot procurement sanction track',
     resourceLink: 'https://gem.gov.in'
   },

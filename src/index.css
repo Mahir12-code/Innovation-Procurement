@@ -32,8 +32,12 @@ html.dark, body.dark, [data-theme='dark'] {
   body {
     background-color: var(--bg-page);
     color: var(--text-primary);
-    @apply selection:bg-orange-100 selection:text-orange-950 dark:selection:bg-orange-900 dark:selection:text-orange-100;
+    @apply selection:bg-orange-500 selection:text-white;
     transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  button, a, [role="button"] {
+    -webkit-user-select: none;
+    user-select: none;
   }
 }
 

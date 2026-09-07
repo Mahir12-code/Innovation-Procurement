@@ -18,7 +18,8 @@ import {
   User,
   Bell,
   FileCheck,
-  Coins
+  Coins,
+  ClipboardCheck
 } from 'lucide-react';
 
 export const PORTAL_NAV_CONFIG = {
@@ -42,7 +43,12 @@ export const PORTAL_NAV_CONFIG = {
         icon: FileText
       },
       {
-        name: 'Pilot Projects',
+        name: 'Evaluator',
+        path: '/government/evaluator',
+        icon: ClipboardCheck
+      },
+      {
+        name: 'Pilot Sandbox',
         path: '/government/pilots',
         icon: Rocket
       },
@@ -82,7 +88,7 @@ export const PORTAL_NAV_CONFIG = {
       { name: 'Dashboard', path: '/startup/dashboard', icon: LayoutDashboard },
       { name: 'Opportunities', path: '/startup/opportunities', icon: Target },
       { name: 'Applications', path: '/startup/applications', icon: FileText },
-      { name: 'Pilot Execution Tracker', path: '/startup/pilots', icon: Rocket },
+      { name: 'Pilot Sandbox', path: '/startup/pilots', icon: Rocket },
       { name: 'Clarifications', path: '/startup/clarifications', icon: MessageSquare },
       { name: 'Document Vault', path: '/startup/documents', icon: FileCheck },
       { name: 'Schemes & Grants', path: '/startup/schemes', icon: Coins },

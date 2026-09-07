@@ -55,7 +55,7 @@ export function GovernmentSettingsPage() {
   const [thresholds, setThresholds] = useState({
     maxPilotGrant: '5000000', // ₹50 Lakhs
     fastTrackSanctionLimit: '10000000', // ₹1 Crore
-    tranche1Ratio: '30', // % Advance on Sandbox Agreement
+    tranche1Ratio: '30', // % Advance on Pilot Zone Agreement
     tranche2Ratio: '40', // % on IoT/Field Deployment
     tranche3Ratio: '30', // % on STQC Third-Party Validation
     maxPilotDurationMonths: '6',
@@ -100,9 +100,9 @@ export function GovernmentSettingsPage() {
       name: 'Dr. S. M. Gaikwad',
       designation: 'Director of Field Validations',
       email: 'sm.gaikwad@health.gov.in',
-      role: 'Field Sandbox Officer',
+      role: 'Field Pilot Zone Officer',
       status: 'Active',
-      permissions: 'IoT Telemetry Audits & On-Site Sandbox Approvals'
+      permissions: 'IoT Telemetry Audits & On-Site Pilot Zone Approvals'
     },
     {
       id: 'OFF-05',
@@ -445,7 +445,7 @@ export function GovernmentSettingsPage() {
 
               <div className="md:col-span-2">
                 <label className="block font-bold text-zinc-700 dark:text-zinc-300 mb-1.5">
-                  Office Physical Address (for Sandbox Site Inspections) *
+                  Office Physical Address (for Pilot Zone Site Inspections) *
                 </label>
                 <Textarea
                   rows={2}
@@ -501,7 +501,7 @@ export function GovernmentSettingsPage() {
             <div className="flex items-center justify-between border-b border-zinc-100 dark:border-zinc-800/80 pb-4">
               <div>
                 <h2 className="text-base font-bold text-zinc-950 dark:text-white">
-                  Public Procurement & Sandbox Grant Thresholds
+                  Public Procurement & Pilot Zone Grant Thresholds
                 </h2>
                 <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">
                   Configure statutory authorization caps as per Maharashtra Public Procurement & DPIIT Startup Directives.
@@ -518,7 +518,7 @@ export function GovernmentSettingsPage() {
                   Maximum Single Pilot Grant Ceiling (₹)
                 </label>
                 <p className="text-[11px] text-zinc-500 dark:text-zinc-400">
-                  Maximum grant authorized for one startup sandbox pilot without Cabinet Committee clearance.
+                  Maximum grant authorized for one startup pilot zone without Cabinet Committee clearance.
                 </p>
                 <div className="relative mt-2">
                   <span className="absolute left-3 top-2.5 text-zinc-400 font-bold">₹</span>
@@ -567,7 +567,7 @@ export function GovernmentSettingsPage() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div>
                   <span className="text-[11px] font-semibold text-zinc-600 dark:text-zinc-400 block mb-1">
-                    Tranche 1: Sandbox Agreement
+                    Tranche 1: Pilot Zone Agreement
                   </span>
                   <div className="flex items-center gap-1.5">
                     <Input
@@ -1000,7 +1000,7 @@ export function GovernmentSettingsPage() {
                 },
                 {
                   key: 'notifyOnMilestoneDue',
-                  title: 'Sandbox Pilot Milestone Due Alerts (T-3 Days)',
+                  title: 'Pilot Zone Milestone Due Alerts (T-3 Days)',
                   desc: 'Alert nodal officer and field engineer 72 hours before a pilot deployment phase deadline expires.'
                 },
                 {
@@ -1164,7 +1164,7 @@ export function GovernmentSettingsPage() {
                 onChange={(e) => setNewOfficer({ ...newOfficer, role: e.target.value })}
                 options={[
                   { value: 'Technical Evaluator', label: 'Technical Jury (Proposal Scoring)' },
-                  { value: 'Field Sandbox Officer', label: 'Field Sandbox Officer (IoT & Telemetry)' },
+                  { value: 'Field Pilot Zone Officer', label: 'Field Pilot Zone Officer (IoT & Telemetry)' },
                   { value: 'Finance Desk Officer', label: 'Finance Desk (Escrow & PFMS)' },
                   { value: 'Sanction Authority', label: 'Sanction Authority (Purchase Orders)' }
                 ]}

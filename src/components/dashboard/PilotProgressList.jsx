@@ -18,7 +18,7 @@ export function PilotProgressList() {
               <Rocket className="w-4 h-4" />
             </span>
             <CardTitle className="text-base text-zinc-950 dark:text-white">
-              Sandbox Pilots & Testbeds
+              Pilot Zones & Testbeds
             </CardTitle>
           </div>
           <CardDescription className="mt-0.5">
